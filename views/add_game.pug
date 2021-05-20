@@ -1,0 +1,44 @@
+extends layout 
+
+block content 
+  .container
+    nav.nav-bar
+      .socialmedia.s-m
+        a(href='https://www.facebook.com/')
+          i.fab.fa-facebook-f
+        a(href='https://www.twitter.com/')
+          i.fab.fa-twitter
+        a(href='https://www.instagram.com/')
+          i.fab.fa-instagram
+        a(href='https://www.linkedin.com/')
+          i.fab.fa-linkedin-in
+      .s-m.logo
+        a(href='/')
+          i.fab.fa-google-plus-g
+      div
+        ul.nav-item
+          if user 
+            li.nav-link 
+              a(href='/users/logout') Logout 
+          else
+            li.nav-link
+              a(href='/users/register') Register
+            li.nav-link
+              a(href='/users/login') Login
+    .reg-form.add-edit
+      .add
+        h1 Add
+      .form-group
+        form(action='/games/add' method='post')
+          .form-div
+            label(for='') Game
+            input(type='text' name='game' value='')
+          .form-div
+            label(for='') Price
+            input(type='number' name='price' value='')
+          .form-div
+            label(for='') Description
+            textarea(name='desc' id='' cols='46' rows='10')
+          .btn
+            input.button-git(type='submit'  value='ADD')
+      div

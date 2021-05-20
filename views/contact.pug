@@ -1,0 +1,47 @@
+extends layout 
+
+block content
+  .container
+   nav.nav-bar.nb-i
+      .socialmedia.s-m
+        a(href='https://www.facebook.com/')
+          i.fab.fa-facebook-f
+        a(href='https://www.twitter.com/')
+          i.fab.fa-twitter
+        a(href='https://www.instagram.com/')
+          i.fab.fa-instagram
+        a(href='https://www.linkedin.com/')
+          i.fab.fa-linkedin-in
+      .s-m.logo
+        a(href='/')
+          i.fab.fa-google-plus-g
+      div
+        ul.nav-item
+          if user 
+            li.nav-link 
+              a(href='/users/logout') Logout 
+          else
+            li.nav-link
+              a(href='/users/register') Register
+            li.nav-link
+              a(href='/users/login') Login
+   .contact-page
+    h2 contact us
+    .contact-info
+     .item
+      i.icon.fas.fa-home
+      |             Indore (MP) , India
+     .item
+      i.icon.fas.fa-phone
+      |             +91 704953-9087
+     .item
+      i.icon.fas.fa-envelope
+      |             tanishqpathak711@gmail.com
+     .item
+      i.icon.fas.fa-clock
+      |             Mon - Fri 8:00 AM to 6:00 PM
+    form.contact-form(action='/contact' method='post')
+     input.textb(name='name' type='text' placeholder='Your Name')
+     input.textb(name='email' type='email' placeholder='Your Email')
+     textarea(name='message' placeholder='Your Message')
+     input.btnc(type='submit' value='Send')

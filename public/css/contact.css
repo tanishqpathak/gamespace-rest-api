@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat Alternates",sans-serif;
+  }
+  
+  
+  .contact-page{
+    z-index: 10;
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+    max-width: 1400px;
+    padding: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .contact-page h2{
+    width: 100%;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 60px;
+  }
+  
+  .contact-info, .contact-form{
+    flex: 1;
+  }
+  
+  .item{
+    margin-bottom: 24px;
+    font-size: 16px;
+    color: white;
+  }
+  
+  .icon{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+  
+  .contact-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .textb{
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    background-color: #222;
+    border: none;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  textarea{
+    width: 100%;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    padding: 12px;
+    background-color: #222;
+    border: none;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .btnc{
+    width: 120px;
+    height: 40px;
+    font-weight: 500;
+    margin-left: auto;
+    background-color: #0C0C0C;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 2px solid #0C0C0C;
+    transition: .3s linear;
+  }
+  
+  .btnc:hover{
+    border:2px solid #3494db;
+    background-color: #0C0C0C;
+    color: #3494db;
+  }
+  
+  @media screen and (max-width: 980px){
+    .contact-page{
+      max-width: 800px;
+    }
+    .contact-page h2{
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+  
+    .contact-info, .contact-form{
+      flex: 100%;
+      margin-bottom: 30px;
+    }
+    .textb{
+      width: 100%;
+    }
+  }
+
+

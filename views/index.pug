@@ -1,0 +1,49 @@
+extends layout 
+
+block content
+  .container
+    nav.nav-bar.nb-i
+      .socialmedia.s-m
+        a(href='https://www.facebook.com/')
+          i.fab.fa-facebook-f
+        a(href='https://www.twitter.com/')
+          i.fab.fa-twitter
+        a(href='https://www.instagram.com/')
+          i.fab.fa-instagram
+        a(href='https://www.linkedin.com/')
+          i.fab.fa-linkedin-in
+      .s-m.logo
+        a(href='/')
+          i.fab.fa-google-plus-g
+      div
+        ul.nav-item
+          if user 
+            li.nav-link 
+              a(href='/users/logout') Logout 
+          else
+            li.nav-link
+              a(href='/users/register') Register
+            li.nav-link
+              a(href='/users/login') Login
+    .showcase
+      .background.b1
+        div
+        a.menu-link(href='/store')
+          h1 STORE
+          p buy or sell games and explore the gaming world
+      .background.b2
+        div
+        a.menu-link(href='/games/add')
+          h1 ADD
+          p add items and travel through wide range of games
+      .background.b3
+        div
+        a.menu-link(href='/about')
+          h1 ABOUT
+          p know about the website, scope and creator
+      .background.b4
+        div
+        a.menu-link(href='/contact')
+          h1 CONTACT
+          p connect with us and stay updated with newsletter
+    

@@ -1,0 +1,35 @@
+extends layout 
+
+block content
+  .container
+   nav.nav-bar.nb-i
+      .socialmedia.s-m
+        a(href='https://www.facebook.com/')
+          i.fab.fa-facebook-f
+        a(href='https://www.twitter.com/')
+          i.fab.fa-twitter
+        a(href='https://www.instagram.com/')
+          i.fab.fa-instagram
+        a(href='https://www.linkedin.com/')
+          i.fab.fa-linkedin-in
+      .s-m.logo
+        a(href='/')
+          i.fab.fa-google-plus-g
+      div
+        ul.nav-item
+          if user 
+            li.nav-link 
+              a(href='/users/logout') Logout 
+          else
+            li.nav-link
+              a(href='/users/register') Register
+            li.nav-link
+              a(href='/users/login') Login
+   .about-showcase
+    .first
+     h1.ab-h about us
+     p.ab-p
+      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Id iusto nam maiores, non consequatur iure rem ad, repellendus amet tempora ullam quis accusantium corrupti ea suscipit mollitia, corporis quisquam consectetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita voluptates cum fugiat officia eligendi aliquam! Labore recusandae eaque repellendus deleniti, in officia ipsam dicta dolore laboriosam corporis sapiente ad tempora? Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium cum sed aspernatur aperiam eaque, dicta quas, consequatur magni consectetur obcaecati distinctio temporibus, libero pariatur magnam. Distinctio provident exercitationem harum quae.
+    .first.fa
+     p gamespace.com © 2021 - All rights reserved 
+     p Design and developed by - @ tanishq

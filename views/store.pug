@@ -1,0 +1,33 @@
+extends layout 
+
+block content
+  .container
+    nav.nav-bar.nb-i
+      .socialmedia.s-m
+        a(href='https://www.facebook.com/')
+          i.fab.fa-facebook-f
+        a(href='https://www.twitter.com/')
+          i.fab.fa-twitter
+        a(href='https://www.instagram.com/')
+          i.fab.fa-instagram
+        a(href='https://www.linkedin.com/')
+          i.fab.fa-linkedin-in
+      .s-m.logo
+        a(href='/')
+          i.fab.fa-google-plus-g
+      div
+        ul.nav-item
+          if user 
+            li.nav-link 
+              a(href='/users/logout') Logout 
+          else
+            li.nav-link
+              a(href='/users/register') Register
+            li.nav-link
+              a(href='/users/login') Login
+    .section.store
+      each game,i in games
+        .first 
+            h1.g-title 
+              a(href="/games/"+game._id)= game.game
+            p.price.ps #{game.price} 

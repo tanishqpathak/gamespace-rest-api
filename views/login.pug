@@ -1,0 +1,43 @@
+extends layout 
+
+block content
+  .container
+    nav.nav-bar
+      .socialmedia.s-m
+        a(href='https://www.facebook.com/')
+          i.fab.fa-facebook-f
+        a(href='https://www.twitter.com/')
+          i.fab.fa-twitter
+        a(href='https://www.instagram.com/')
+          i.fab.fa-instagram
+        a(href='https://www.linkedin.com/')
+          i.fab.fa-linkedin-in
+      .s-m.logo
+        a(href='/')
+          i.fab.fa-google-plus-g
+      div
+        ul.nav-item
+          if user 
+            li.nav-link 
+              a(href='/users/logout') Logout 
+          else
+            li.nav-link
+              a(href='/users/register') Register
+            li.nav-link
+              a(href='/users/login') Login
+    .log-form
+      .title.t1.form-group
+        h1
+          | LOG
+          br
+          | IN
+      .form-group
+        form.login-form(action='/users/login' method='post')
+          .form-div
+            label(for='') Username
+            input(type='text' name='username' value='')
+          .form-div
+            label(for='') Password
+            input(type='password' name='password' id='')
+          .btn
+            input.button-git(type='submit'  value='LOGIN')
